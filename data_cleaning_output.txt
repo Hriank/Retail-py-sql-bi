@@ -1,0 +1,59 @@
+Reading sheets: ['Year 2009-2010', 'Year 2010-2011']
+Raw shape: (1067371, 8)
+
+Missing values:
+               count    pct
+CustomerID   243007  22.77
+Description    4382   0.41
+StockCode         0   0.00
+InvoiceNo         0   0.00
+Quantity          0   0.00
+InvoiceDate       0   0.00
+UnitPrice         0   0.00
+Country           0   0.00
+
+Dropped 243007 rows with missing CustomerID (22.8% of raw data).
+Removed 71 rows with non-positive quantity/price.
+Removed 26124 exact duplicate rows.
+
+✅ Cleaned transaction data saved to data/clean/transactions_clean.csv -- shape (779425, 10)
+✅ Cancelled orders saved separately to data/clean/cancellations.csv -- shape (18744, 9)
+
+Top 10 countries by revenue:
+ Country
+United Kingdom    1.110321e+07
+EIRE              4.212175e+05
+Germany           3.791907e+05
+France            2.832823e+05
+Netherlands       2.511975e+05
+Australia         8.667637e+04
+Switzerland       8.637804e+04
+Spain             7.387064e+04
+Belgium           5.952092e+04
+Portugal          4.734645e+04
+Name: TotalPrice, dtype: float64
+
+Top 10 products by revenue:
+ Description
+REGENCY CAKESTAND 3 TIER              224208.40
+WHITE HANGING HEART T-LIGHT HOLDER    168526.58
+PARTY BUNTING                          84728.98
+ASSORTED COLOUR BIRD ORNAMENT          76628.53
+JUMBO BAG RED RETROSPOT                73239.42
+POSTAGE                                58525.12
+PAPER CHAIN KIT 50'S CHRISTMAS         54033.23
+CHILLI LIGHTS                          50114.47
+VINTAGE UNION JACK BUNTING             45518.38
+CHOCOLATE HOT WATER BOTTLE             42949.34
+Name: TotalPrice, dtype: float64
+
+✅ Charts saved to reports/figures/
+
+✅ Customer-level feature table saved to data/clean/customer_features.csv -- 5878 unique customers
+Repeat customer rate: 72.4%
+
+Done. Files written:
+ - data/clean/transactions_clean.csv (exists)
+ - data/clean/customer_features.csv (exists)
+ - reports/figures/monthly_revenue.png (exists)
+ - reports/figures/order_value_distribution.png (exists)
